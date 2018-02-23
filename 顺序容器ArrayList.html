@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>顺序容器ArrayList</title>
+</head>
+<body>
+<div id="wmd-preview" class="wmd-preview"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 data-anchor-id="k37b" id="顺序容器arraylist">顺序容器ArrayList</h1><hr><div class="md-section-divider"></div><h2 data-anchor-id="weya" id="1创建">1.创建</h2><blockquote data-anchor-id="ss9r" class="white-blockquote">
+  <p>ArrayList notes = new ArrayList();</p>
+</blockquote><p data-anchor-id="8cjc">类似C中的链表，以存储String类型的数据为例</p><hr><div class="md-section-divider"></div><h2 data-anchor-id="bizv" id="2简单功能">2.简单功能</h2><blockquote data-anchor-id="7ygj" class="white-blockquote">
+  <ul>
+  <li>添加数据 <code>.add(s)</code></li>
+  <li>删除数据 <code>.remove(index)</code></li>
+  <li>插入数据 <code>.add(location,s)</code></li>
+  <li>取某位值 <code>.get(index)</code></li>
+  <li>元素个数 <code>.size()</code></li>
+  <li>判断是否包含String <code>.contain("String")</code></li>
+  <li>判断List是否为空 <code>.isEmpty()</code></li>
+  <li>清空List  <code>.clear()</code></li>
+  </ul>
+</blockquote><hr><div class="md-section-divider"></div><h2 data-anchor-id="ii2l" id="3toarraya用法">3.<code>toArray(a)</code>用法</h2><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="wbqe"><ol class="linenums"><li class="L0"><code><span class="typ">String</span><span class="pun">[]</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">String</span><span class="pun">[</span><span class="pln">arrayList</span><span class="pun">.</span><span class="pln">size</span><span class="pun">()];</span></code></li><li class="L1"><code><span class="pln">arrayList</span><span class="pun">.</span><span class="pln">toArray</span><span class="pun">(</span><span class="pln">a</span><span class="pun">);</span></code></li></ol></pre><hr><div class="md-section-divider"></div><h2 data-anchor-id="kj4q" id="4遍历">4.遍历</h2><ul data-anchor-id="bay1">
+<li>for each循环</li>
+</ul><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="d0b9"><ol class="linenums"><li class="L0"><code><span class="kwd">for</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> s</span><span class="pun">:</span><span class="pln">arryList</span><span class="pun">)</span></code></li><li class="L1"><code><span class="pun">{</span><span class="pln">   </span></code></li><li class="L2"><code><span class="pln">    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">s</span><span class="pun">);</span></code></li><li class="L3"><code><span class="pun">}</span></code></li></ol></pre><ul data-anchor-id="vvh8">
+<li>索引值遍历(效率最高)</li>
+</ul><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="bju6"><ol class="linenums"><li class="L0"><code><span class="kwd">for</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> a </span><span class="pun">&lt;</span><span class="pln"> arrayList</span><span class="pun">.</span><span class="pln">size</span><span class="pun">();</span><span class="pln"> a</span><span class="pun">++)</span></code></li><li class="L1"><code><span class="pun">{</span></code></li><li class="L2"><code><span class="pln">    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="kwd">print</span><span class="pun">(</span><span class="pln">arrayList</span><span class="pun">.</span><span class="kwd">get</span><span class="pun">(</span><span class="pln">a</span><span class="pun">)</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">" "</span><span class="pun">);</span></code></li><li class="L3"><code><span class="pun">}</span></code></li></ol></pre><ul data-anchor-id="prsa">
+<li>迭代器遍历</li>
+</ul><div class="md-section-divider"></div><pre class="prettyprint linenums prettyprinted" data-anchor-id="lqk0"><ol class="linenums"><li class="L0"><code><span class="typ">Iterator</span><span class="pun">&lt;</span><span class="typ">String</span><span class="pun">&gt;</span><span class="pln"> a </span><span class="pun">=</span><span class="pln"> arrayList</span><span class="pun">.</span><span class="pln">iterator</span><span class="pun">();</span></code></li><li class="L1"><code><span class="kwd">while</span><span class="pun">(</span><span class="pln">a</span><span class="pun">.</span><span class="pln">hasNext</span><span class="pun">())</span></code></li><li class="L2"><code><span class="pun">{</span></code></li><li class="L3"><code><span class="pln">    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="kwd">print</span><span class="pun">(</span><span class="pln">a</span><span class="pun">.</span><span class="kwd">next</span><span class="pun">()</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">" "</span><span class="pun">);</span></code></li><li class="L4"><code><span class="pun">}</span></code></li></ol></pre><hr><p data-anchor-id="jjt8"><i class="icon-book"></i>附一篇详细关于ArrayList的<a href="http://blog.csdn.net/gongchuangsu/article/details/51514389" target="_blank">学习笔记</a></p></div>
+</body>
+</html>
